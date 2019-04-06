@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Train Scheduler</title>
+
+  <link href="assets/css/reset.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+    crossorigin="anonymous">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+
+  <div class="jumbotron" id="allAboard">
+    <!--div class="row">
+      <div class="col-md-3">
+        <img src="assets/images/cTrain.png" alt="crazyTrain" height="100" width="100">
+      </div>
+    </div>-->
+    <h1 id="headlineBig">All Aboard</h1>
+    <h5 id="headlineSmall">hahahahaha</h5>
+    <h6 id="headlineSmall">ai ai ai</h6>
+  </div>
+
+</head>
+
+<body>
+  <div class="jumbotron" id="currentSchedule">
+    <span class="d-block p-2 bg-secondary text-white">Current Train Schedule</span>
+    <table class="table" id="trainList">
+      <thead class="thead">
+        <tr>
+          <th scope="col">Train Name</th>
+          <th scope="col">Destination</th>
+          <th scope="col">Next Arrival</th>
+          <th scope="col">Frequency (min)</th>
+          <th scope="col">Minutes Away</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td scope="row">Trenton Express</th>
+          <td>Trenton</td>
+          <td>05:35 PM</td>
+          <td>25</td>
+          <td>10</td>
+        </tr>
+        <tr>
+          <td scope="row">Southern Pacific Railroad</th>
+          <td>Yuma</td>
+          <td>03:10 PM</td>
+          <td>4320</td>
+          <td>18</td>
+        </tr>
+        <tr>
+          <td scope="row">Raritan Valley Line</th>
+          <td>Journal Square</td>
+          <td>11:34 AM</td>
+          <td>90</td>
+          <td>35</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="jumbotron" id="newTrains">
+    <form>
+      <span class="d-block p-2 bg-secondary text-white">Add Train</span>
+
+      <div class="form-group">
+        <label for="formGroupExampleInput" class="formText">Train Name</label>
+        <input type="text" class="form-control formGroupExampleInput" id="trainNameData" placeholder="">
+      </div>
+      <div class="form-group">
+        <label for="formGroupExampleInput2" class="formText">Destination</label>
+        <input type="text" class="form-control formGroupExampleInput" id="destData" placeholder="">
+      </div>
+      <div class="form-group">
+          <label for="formGroupExampleInput3" class="formText">First Train Time (HH:mm - military time)</label>
+          <input type="text" class="form-control formGroupExampleInput" id="trainTimeData" placeholder="">
+        </div>
+        <div class="form-group">
+            <label for="formGroupExampleInput4" class="formText">Frequency (min)</label>
+            <input type="text" class="form-control formGroupExampleInput" id="freqData" placeholder="">
+            <button type="button" class="btn btn-secondary" id="submitBtn">Submit</button>
+          </div>
+    </form>
+  </div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script type="text/javascript" src="assets/javaScript/apps.js"></script>
+
+</body>
+
+</html>
